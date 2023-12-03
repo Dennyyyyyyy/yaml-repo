@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  labels:
+     app: dendemo
+     run: dendemo
+    spec:
+      containers:
+      - name: app
+        image: gcr.io/k8s-k3s-405517/dendemo:v1.0.0
+        ports:
+        - containerPort: 8080
+	  name: http
